@@ -87,6 +87,9 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 # Media
 TARGET_USES_ION := true
 
+# MiuiCamera
+-include device/xiaomi/miuicamera-surya/BoardConfig.mk
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 
