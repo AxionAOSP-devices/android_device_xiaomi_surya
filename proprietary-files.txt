@@ -442,7 +442,9 @@ vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede025
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|12d4edcd852196a531f688ed74d86ea10c4acb43
 
 # Display - from sweet_k6a OS1.0.28.0.THGMIXM
+vendor/lib64/libdisp-aba.so|44993853ff9d4340e856e6f53d802f10372442d3
 vendor/lib64/libdisplayqos.so|5548732c916e629f18f45ce257ce843b679a136a
+vendor/lib64/libdpps.so|7f54d826ebe3748412e8c77ebb03c9a0193e9bf7
 vendor/lib64/libhdr_tm.so|9977b4ccb6667d990210c1ac980e55325f7e7a50
 vendor/lib64/libqseed3.so|7f2a659fb9acd84d79c11dbd6901b816d5d1214f
 vendor/lib64/libsdm-color.so|2595b34578b078e0595ce555f714a74d676ef501
