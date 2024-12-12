@@ -68,6 +68,9 @@ PRODUCT_PACKAGES += \
     libaudio-resampler
 
 PRODUCT_PACKAGES += \
+    DSPVolumeSynchronizer
+
+PRODUCT_PACKAGES += \
     sku_surya_audio_symlink
 
 PRODUCT_COPY_FILES += \
