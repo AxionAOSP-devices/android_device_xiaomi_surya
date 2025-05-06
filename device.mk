@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
     fs_config_files
 
 # Audio
+TARGET_EXCLUDES_AUDIOFX := true
 TARGET_USES_CUSTOM_DOLBY_XML := true
 
 PRODUCT_PACKAGES += \
