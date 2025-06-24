@@ -22,6 +22,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths_wcd9375.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9375.xml \
     $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml
 
+# Camera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/surya-camera.mk)
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer \
