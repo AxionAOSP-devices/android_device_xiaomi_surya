@@ -283,6 +283,7 @@ PRODUCT_PACKAGES += \
     KarnaPowerProfile \
     KarnaSettingsProvider \
     KarnaWifiOverlay \
+    NexusLauncherOverlay \
     SuryaPowerProfile \
     SuryaSettingsProvider \
     SuryaWifiOverlay
