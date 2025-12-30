@@ -20,13 +20,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Call the proprietary setup
-$(call inherit-product, vendor/xiaomi/sm6150-common/sm6150-common-vendor.mk)
+$(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
+
+# API level, the device has been commercially launched on
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -59,11 +62,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libaudio-resampler
 
+PRODUCT_PACKAGES += \
+    sku_surya_audio_symlink
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
+    $(LOCAL_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt
+    $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(LOCAL_PATH)/configs/audio/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt \
+    $(LOCAL_PATH)/configs/audio/mixer_paths_wcd9375.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9375.xml \
+    $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
@@ -118,6 +128,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/display/qdcm_calib_data_nt36672c_huaxing_fhd_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_nt36672c_huaxing_fhd_video_mode_dsi_panel.xml \
+    $(LOCAL_PATH)/configs/display/qdcm_calib_data_nt36672c_tianma_fhd_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_nt36672c_tianma_fhd_video_mode_dsi_panel.xml
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -182,6 +196,7 @@ PRODUCT_PACKAGES += \
 # Init scripts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.surya.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.rc \
     $(LOCAL_PATH)/rootdir/etc/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc
 
 PRODUCT_COPY_FILES += \
@@ -192,6 +207,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh
+
+# IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir-service.example
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -205,6 +227,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENABLE_UFFD_GC := true
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
+
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
@@ -216,7 +242,7 @@ $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,fal
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.xiaomi_sm6150
+    vendor.lineage.livedisplay-service.surya
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -224,6 +250,27 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     $(LOCAL_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+
+# NFC
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    Tag
+
+PRODUCT_PACKAGES += \
+    android.hardware.nfc-service.nxp
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
+    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_surya/android.hardware.nfc.hcef.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_surya/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_surya/android.hardware.nfc.uicc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_surya/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_surya/android.hardware.se.omapi.uicc.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_surya/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_surya/com.nxp.mifare.xml
 
 # Network
 PRODUCT_COPY_FILES += \
@@ -235,6 +282,15 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
+
+# Overlay-RRO
+PRODUCT_PACKAGES += \
+    KarnaPowerProfile \
+    KarnaSettingsProvider \
+    KarnaWifiOverlay \
+    SuryaPowerProfile \
+    SuryaSettingsProvider \
+    SuryaWifiOverlay
 
 # Partitions
 PRODUCT_PACKAGES += \
@@ -248,6 +304,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # QTI
 PRODUCT_COPY_FILES += \
@@ -270,6 +329,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
 # Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.1-service.multihal
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
@@ -289,6 +351,19 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc
+
+# System properties
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/build_karna.prop:$(TARGET_COPY_OUT_ODM)/etc/build_karna.prop \
+    $(LOCAL_PATH)/build_surya-INT.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-INT.prop \
+    $(LOCAL_PATH)/build_surya-THAI.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-THAI.prop \
+    $(LOCAL_PATH)/build_surya-THAI_PA.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-THAI_PA.prop
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/build_karna.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_karna.prop \
+    $(LOCAL_PATH)/build_surya-INT.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-INT.prop \
+    $(LOCAL_PATH)/build_surya-THAI.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-THAI.prop \
+    $(LOCAL_PATH)/build_surya-THAI_PA.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-THAI_PA.prop
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -341,6 +416,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml
 
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
@@ -390,3 +469,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
     ro.zram.first_wb_delay_mins=1440 \
     ro.zram.periodic_wb_delay_hours=24
+
+# Call the proprietary setup
+$(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)

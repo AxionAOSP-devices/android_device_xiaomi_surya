@@ -11,10 +11,15 @@ persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.hifi=false
 persist.vendor.audio.ras.enabled=false
+persist.vendor.audio.ring.filter.mask=0
 persist.vendor.audio.spv3.enable=true
+persist.vendor.audio.voicecall.speaker.stereo=true
 ro.af.client_heap_size_kbyte=7168
 ro.config.vc_call_vol_steps=11
+ro.vendor.audio.soundfx.type=mi
+ro.vendor.audio.soundfx.usb=true
 vendor.audio.adm.buffering.ms=6
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
@@ -22,6 +27,7 @@ vendor.audio.feature.anc_headset.enable=true
 vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.battery_listener.enable=false
 vendor.audio.feature.compr_cap.enable=false
+vendor.audio.feature.compr_voip.enable=false
 vendor.audio.feature.compress_in.enable=false
 vendor.audio.feature.compress_meta_data.enable=true
 vendor.audio.feature.concurrent_capture.enable=false
@@ -76,6 +82,7 @@ vendor.audio.usb.disable.sidetone=true
 vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
+vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
@@ -108,6 +115,7 @@ vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 camera.disable_zsl_mode=1
+vendor.camera.remapid=0 1 21 22 25 61 100 101
 
 # Chipset
 ro.soc.manufacturer=QTI
@@ -134,6 +142,7 @@ persist.vendor.dpmhalservice.enable=1
 # Display
 debug.sf.auto_latch_unsignaled=0
 debug.sf.enable_gl_backpressure=1
+debug.sf.frame_rate_multiple_threshold=120
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=15666666
 debug.sf.late.app.duration=13666666
@@ -156,8 +165,12 @@ ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 ro.surface_flinger.protected_contents=true
+ro.surface_flinger.set_idle_timer_ms=500
+ro.surface_flinger.set_touch_timer_ms=700
+ro.surface_flinger.set_display_power_timer_ms=1000
 ro.surface_flinger.supports_background_blur=1
 ro.surface_flinger.use_color_management=true
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 vendor.display.comp_mask=0
 vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
@@ -171,6 +184,8 @@ vendor.display.disable_ui_3d_tonemap=1
 vendor.display.enable_default_color_mode=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
+vendor.display.idle_time=0
+vendor.display.idle_time_inactive=0
 vendor.gralloc.disable_ubwc=0
 vendor.display.qdcm.mode_combine=1
 
@@ -181,6 +196,19 @@ persist.sys.sf.color_mode=9
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# Fingerprint
+persist.vendor.fingerprint.type=side
+persist.vendor.fingerprint.sensor_modules=goodix,fpc
+persist.vendor.fingerprint.sensor_location=1080|920|220|local:4630946688386997377,1080|920|220|local:4630946772315683201
+
+# Fluence
+ro.vendor.audio.sdk.fluencetype=none
+
+# HVDCP
+persist.vendor.cp.fcc_main_ua=400000
+persist.vendor.cp.taper_term_mv=6500
+persist.vendor.cp.vbus_offset_mv=1040
 
 # IMS
 persist.dbg.volte_avail_ovr=1
@@ -223,6 +251,9 @@ telephony.lteOnCdmaDevice=1
 
 # RCS
 persist.rcs.supported=1
+
+# System properties
+ro.product.property_source_order=odm,vendor,product,system_ext,system
 
 # USB
 sys.usb.mtp.batchcancel=1

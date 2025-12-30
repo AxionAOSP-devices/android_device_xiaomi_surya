@@ -1,0 +1,15 @@
+[
+  {
+    "repository": "PixelOS-AOSP/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi"
+  },
+  {
+    "repository": "PixelOS-Devices/android_kernel_xiaomi_surya",
+    "target_path": "kernel/xiaomi/surya"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "NoPrincessHere/proprietary_vendor_xiaomi_surya",
+    "target_path": "vendor/xiaomi/surya"
+  }
+]
