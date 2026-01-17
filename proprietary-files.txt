@@ -557,14 +557,14 @@ vendor/lib64/libgsl.so|a4cac2794ec2cb7c4e00ec0f674af8a6b2bfe77c
 vendor/lib64/libllvm-glnext.so|41a295fb22cf14304634425b1a192a6d572a8a55
 vendor/lib64/libllvm-qcom.so|512c0db7ea845f992f382e53da4ca4c988dc5837
 
-# Graphics (Firmware)
-vendor/firmware/a615_zap.b00
-vendor/firmware/a615_zap.b01
-vendor/firmware/a615_zap.b02
-vendor/firmware/a615_zap.elf
-vendor/firmware/a615_zap.mdt
-vendor/firmware/a618_gmu.bin
-vendor/firmware/a630_sqe.fw
+# Graphics (Firmware) - from sweet_k6a OS1.0.28.0.THGMIXM
+vendor/firmware/a615_zap.b00|1f966d9754aa6b971d39f5b3d9637480e67aa3fe
+vendor/firmware/a615_zap.b01|d7abf430121786d807c7388b8acb1d3602135148
+vendor/firmware/a615_zap.b02|4ae54047f9629f2470a5d58f3940c5eb51298b96
+vendor/firmware/a615_zap.elf|e22ad06a6a193b4fd156afc09df51834a4448466
+vendor/firmware/a615_zap.mdt|2cc4acaddbdbb91845ee52f518730b78bfe043fb
+vendor/firmware/a618_gmu.bin|0c211ef8a3246d649a4ae52a926d128b61e3c264
+vendor/firmware/a630_sqe.fw|6526cbb24d614dd67dc18e3c80d5c4374a0b3f63
 
 # Gatekeeper - from sweet_k6a OS1.0.23.0.THGMIXM
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
