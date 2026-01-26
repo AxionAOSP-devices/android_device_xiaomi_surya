@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/custom_surya.mk
+    $(LOCAL_DIR)/lineage_surya.mk
