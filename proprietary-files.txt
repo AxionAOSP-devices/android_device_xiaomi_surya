@@ -1,6 +1,6 @@
 # These proprietary files are extracted from POCO X3 NFC (codenamed `surya`) MIUI V14.0.5.0.SJGEUXM, unless pinned
 
-# ADSP - from sweet_k6a OS1.0.28.0.THGMIXM
+# ADSP - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/adsprpcd|12e09d8e87b260a8721c7938890186a0877a9e85
 vendor/bin/cdsprpcd|530bcfcf9a31dedcc6c8ff5ea33fbaf8c03ab877
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|77f5aaf6d773ee545e39bc5fdc99c65434c05379
@@ -48,7 +48,7 @@ vendor/lib/rfsa/adsp/misound_res.bin
 vendor/lib/rfsa/adsp/tas25xx_TI_0.bin
 vendor/lib/rfsa/adsp/tas25xx_TI_1.bin
 
-# Alarm - from sweet_k6a OS1.0.28.0.THGMIXM
+# Alarm - from sweet_k6a OS1.0.33.0.THGMIXM
 product/app/PowerOffAlarm/PowerOffAlarm.apk|8a9df6eaafecbf00e6e52cfe48c40d89105be730
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|586b142f9bc4bf3098b4962682c4de1c13810f9b
 vendor/bin/power_off_alarm|b8c7ddc1bed336753c3746925fd0f4a9925aa36c
@@ -56,7 +56,7 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|4129558506dc078c03679ba362acda4755457742
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|dcfdc04b4e0c6e6a4ffa60e1694268bd0327e65c
 
-# ANT+ - from sweet_k6a OS1.0.28.0.THGMIXM
+# ANT+ - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|87dc1a131534659173e71e108e7a3ffe6325845f
 
 # Audio (ACDB)
@@ -84,7 +84,7 @@ vendor/lib/libhfp.so
 vendor/lib/libsndmonitor.so
 vendor/lib/libspkrprot.so
 
-# Audio (FX modules) - from sweet_k6a OS1.0.28.0.THGMIXM
+# Audio (FX modules) - from sweet_k6a OS1.0.33.0.THGMIXM
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
 system_ext/framework/audiosphere.jar|ecfaddf551830ccb6f5b0b979a407eccc9305e94
 vendor/lib/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
@@ -367,16 +367,16 @@ vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 
-# Charger - from sweet_k6a OS1.0.28.0.THGMIXM
+# Charger - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/hvdcp_opti;RECOVERY_AVAILABLE|9cf5d4c597cc9cb333201f5e4dd12d996d3501d7
 
-# Certificate Authority - from sweet_k6a OS1.0.28.0.THGMIXM
+# Certificate Authority - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/app/CACertService/CACertService.apk|094253453718a261f863b6126b1bd365ca154fb5
 vendor/lib64/libcacertclient.so|69ae73b9be13507ff39398ac5813ad709b8b7c32
 vendor/lib64/libjnihelper.so|d3687f06782adc074a38b9ff3c1aacd57ec7a6e7
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so|1633c31212d1ea9338b79ebfc2476f83424f36ee
 
-# CNE - from sweet_k6a OS1.0.28.0.THGMIXM
+# CNE - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink|b7ff9a18c255a569431034ddd93624d8e46800ed
 vendor/app/IWlanService/IWlanService.apk|8f2331efbc912d22c0abdb4bf8f298fded1006c2
 vendor/bin/cnd|51189ff870b277e4899426262a39d56149668e54
@@ -407,7 +407,7 @@ vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so|c041dbfc99643e791e52c4e7f3a
 vendor/lib64/vendor.qti.latency@2.0.so|60ab3143325e855f8c72e3f603c28efe2e7227b9
 vendor/lib64/vendor.qti.latency@2.1.so|47f0d25338274af94764be9d39eabef8cf5ca790
 
-# CNE profiles - from sweet_k6a OS1.0.28.0.THGMIXM
+# CNE profiles - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
@@ -436,12 +436,12 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bcc
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
 
-# Configstore - from sweet_k6a OS1.0.28.0.THGMIXM
+# Configstore - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|81be3e1c39280c1bed769ff4e3bee25b4ef1195e
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|12d4edcd852196a531f688ed74d86ea10c4acb43
 
-# Display - from sweet_k6a OS1.0.28.0.THGMIXM
+# Display - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/lib64/libdisp-aba.so|44993853ff9d4340e856e6f53d802f10372442d3
 vendor/lib64/libdisplayqos.so|5548732c916e629f18f45ce257ce843b679a136a
 vendor/lib64/libdpps.so|7f54d826ebe3748412e8c77ebb03c9a0193e9bf7
@@ -457,7 +457,7 @@ vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 # Display - from NX627J-user 11 RKQ1.200826.002 nubia.20201029.204053 release-keys
 vendor/lib64/libsdedrm.so|582910d21139781ad9e414c35207584f51e035e2
 
-# DPM - from sweet_k6a OS1.0.28.0.THGMIXM
+# DPM - from sweet_k6a OS1.0.33.0.THGMIXM
 system/framework/tcmclient.jar|bf99068d22c67fa08e9954497618d0b825c99e5f
 system_ext/bin/dpmd|d098df72c60697de359a80d6377689d98fb11221
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
@@ -477,7 +477,7 @@ vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor|d9f1aa7f93b928f42499d613d20ccbc60f279097
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
-# DRM - from sweet_k6a OS1.0.28.0.THGMIXM
+# DRM - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/qseecomd|e58882bc388f72757f6c768cf1db24604b14e768
 vendor/etc/init/qseecomd.rc|3b5979e9e89a9bad26b2c502e4ba226f1e92360c
 vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
@@ -496,7 +496,7 @@ vendor/lib64/librpmb.so|9ddc3b22dbde8b60aaf531601ac452e945d95a14
 vendor/lib64/libssd.so|0a461a98eb314fe6e79bfe08457a88e48c52550a
 vendor/lib64/libtrustedapploader.so|e9ebd0130381cf60219d4c511a8e6908684cb7ab
 
-# DRM (Widevine) - from sweet_k6a OS1.0.28.0.THGMIXM
+# DRM (Widevine) - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|2158f47423c723a9da29bb81bb16987a1e715c21
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c1b1429e90b04ff96ebf60
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
@@ -506,14 +506,14 @@ vendor/lib64/libwvhidl.so|d328ee3a250074145694dd880e585c34189b6e5b|8e435267fff53
 # DRM (Widevine)
 vendor/lib64/liboemcrypto.so
 
-# DSP - from sweet_k6a OS1.0.28.0.THGMIXM
+# DSP - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/dspservice|a7344fc3d27a49df30858ebc3f73ee5818e752d4
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
 vendor/lib/vendor.qti.hardware.dsp@1.0.so|8fcb647d22144c0ce005eae37e05e786d2b045be
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|223a9268bd92bd80dab3df02fbef38ea86bcbadd
 
-# FM - from sweet_k6a OS1.0.28.0.THGMIXM
+# FM - from sweet_k6a OS1.0.33.0.THGMIXM
 system_ext/lib64/fm_helium.so|623a78dfe8f73808158bc88116cd3204588aa126
 system_ext/lib64/libfm-hci.so|9f7f908e749dc9e41effaa3546eb0cac483ecbeb
 system_ext/lib64/vendor.qti.hardware.fm@1.0.so|474a9399822c89409cd001095ad12eacfd079fba
@@ -527,7 +527,7 @@ vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
 
-# Graphics - from sweet_k6a OS1.0.28.0.THGMIXM
+# Graphics - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/lib/egl/eglSubDriverAndroid.so|2caaf6ab18cfe56f6d445b60cb62f81b18bc31d2
 vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so|e6382c9115d5d471c32c010fc50dcbbf6a523d1f
 vendor/lib/egl/libGLESv1_CM_adreno.so|715f3463528f1e74ffa02627ee5916a09e0748f5
@@ -559,21 +559,21 @@ vendor/lib64/libgsl.so|a4cac2794ec2cb7c4e00ec0f674af8a6b2bfe77c
 vendor/lib64/libllvm-glnext.so|41a295fb22cf14304634425b1a192a6d572a8a55
 vendor/lib64/libllvm-qcom.so|512c0db7ea845f992f382e53da4ca4c988dc5837
 
-# Graphics (Firmware) - from sweet_k6a OS1.0.28.0.THGMIXM
+# Graphics (Firmware) - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/firmware/a615_zap.b00|1f966d9754aa6b971d39f5b3d9637480e67aa3fe
-vendor/firmware/a615_zap.b01|d7abf430121786d807c7388b8acb1d3602135148
+vendor/firmware/a615_zap.b01|e10807eb3dd2d5dfaa564f86a8c33710b57d2d01
 vendor/firmware/a615_zap.b02|4ae54047f9629f2470a5d58f3940c5eb51298b96
-vendor/firmware/a615_zap.elf|e22ad06a6a193b4fd156afc09df51834a4448466
-vendor/firmware/a615_zap.mdt|2cc4acaddbdbb91845ee52f518730b78bfe043fb
+vendor/firmware/a615_zap.elf|9361b8d777a2d05d23c4f94d97ff0e818ab31403
+vendor/firmware/a615_zap.mdt|019096c5e4112f296e911339845140281d7d7fed
 vendor/firmware/a618_gmu.bin|0c211ef8a3246d649a4ae52a926d128b61e3c264
 vendor/firmware/a630_sqe.fw|6526cbb24d614dd67dc18e3c80d5c4374a0b3f63
 
-# Gatekeeper - from sweet_k6a OS1.0.28.0.THGMIXM
+# Gatekeeper - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|14819df15693c737fb2a51bf89fe826200286006
 
-# GPS - from sweet_k6a OS1.0.28.0.THGMIXM
+# GPS - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/loc_launcher|f170dc02d9046fcde1fc58656b0387773a85e78d
 vendor/bin/lowi-server|317bd33a243fae53885a526ffc06e9dedc6d7bfd
 vendor/bin/slim_daemon|92e0456fddf986faadf3adcd5a264abbd233d2f2
@@ -605,7 +605,7 @@ vendor/lib64/vendor.qti.gnss@4.0-service.so|04233086636be1aeaaedf88d3126803b0c40
 vendor/lib64/vendor.qti.gnss@4.0.so|e38ae43982dc62bf48193a6c3eb2ae385adb37aa
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|3ff445db2dd2db1a1068fe70a54a6c04fbdd3123
 
-# IMS - from sweet_k6a OS1.0.28.0.THGMIXM
+# IMS - from sweet_k6a OS1.0.33.0.THGMIXM
 system_ext/lib64/lib-imsvideocodec.so|aeea873dbb3ba0de6021a3e9004734cff61b5372
 system_ext/lib64/lib-imsvt.so|dcf23823c74ae9844b6a5317f798b993c45b2e41
 system_ext/lib64/lib-imsvtextutils.so|1dfb5640cd23a92e7ca55a84118b2966653aebc7
@@ -666,7 +666,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|f52f0cd5e19455eba97dea61542217d4aa5
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|beeb9324900da6582f92ffab225cc0d314bf71bd
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
 
-# IPA - from sweet_k6a OS1.0.28.0.THGMIXM
+# IPA - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/etc/init/ipa_fws.rc|f1826b81077f51470c97781823f109f12361ac8b
 
 # IPA
@@ -681,10 +681,10 @@ vendor/firmware/ipa_fws.mdt
 # IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so;FIX_SONAME
 
-# IRQ balance - from sweet_k6a OS1.0.28.0.THGMIXM
+# IRQ balance - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/msm_irqbalance|b075c2f4092c175950a2c26d19bf2013e2efd6d5
 
-# Keymaster - from sweet_k6a OS1.0.28.0.THGMIXM
+# Keymaster - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|0e0aa56f9ad9b1832eeb39db82eed1f021d7e244
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc|f6907552961ba772c1ad5b493913a60d65abedb4
 vendor/lib64/libkeymasterdeviceutils.so|6fd0b0e1b30c4e6c5272794896306596880c657b
@@ -692,12 +692,12 @@ vendor/lib64/libkeymasterutils.so|2392abef423c0610d9625670f1ff3063532e9bc1
 vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
 vendor/lib64/libqtikeymaster4.so|327715d70e914e5c4eae2fbee039e24bb81d9157
 
-# Listen - from sweet_k6a OS1.0.28.0.THGMIXM
+# Listen - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/lib/libadpcmdec.so|297d8fecff85b6dc67ff19e788bcf3f1286014a0
 vendor/lib/librice.so|30f281ca3307bee5072c7b1eeea743b466af95ac
 vendor/lib/libsmwrapper.so|5e1bd65045a5fd33d348351c73e74799af8acb19
 
-# Media - from sweet_k6a OS1.0.28.0.THGMIXM
+# Media - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/hw/vendor.qti.media.c2@1.0-service|83c2effb6f76cb095bae840d95a2026014d92fe9
 vendor/bin/vppservice|ba26483eeedd023485c41c58352251e0b5bf53f6
 vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
@@ -723,12 +723,12 @@ vendor/lib64/vendor.qti.hardware.vpp@1.3.so|85a4e2ca843525db5c76486dbee4c5c7a672
 # NFC
 vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
-# Peripheral Manager - from sweet_k6a OS1.0.28.0.THGMIXM
+# Peripheral Manager - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/pm-proxy|0704192692efb4b79e8cb1a2252625ad24468805
 vendor/bin/pm-service|1a48e2a015181b351374b99053fb5dee8e2750ee
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
-# QMI - from sweet_k6a OS1.0.28.0.THGMIXM
+# QMI - from sweet_k6a OS1.0.33.0.THGMIXM
 system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 vendor/bin/irsc_util|121deb2d6fd21b122c6a8ca8b30ef167f6b90f61
 vendor/bin/pd-mapper|f42d79a48e3e0e4bba47e9ccca60d65a6c8f5716
@@ -922,7 +922,7 @@ vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 
-# Soter - from sweet_k6a OS1.0.28.0.THGMIXM
+# Soter - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/app/SoterService/SoterService.apk|aa4af4b5633be39820854494f98113cd8020817b
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|8e315a85eeeb94a51f1533c80212d2fc0ec88760
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
@@ -944,10 +944,10 @@ vendor/etc/thermald-devices.conf
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalfeature.so
 
-# Thermal - from sweet_k6a OS1.0.28.0.THGMIXM
+# Thermal - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/etc/init/init.mi_thermald.rc|6505d89e19957888612d89f6769585a7d26af080|9c6f1014ef9ac48ac0f3fc963dae88276e607ed7
 
-# Time - from sweet_k6a OS1.0.28.0.THGMIXM
+# Time - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/app/TimeService/TimeService.apk|e57cf01cd971570b1962914b2537d82d955dfe1f
 vendor/bin/time_daemon|48401d7f85c87aa3e12ce7b4a969a50cbf59c293
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
@@ -1000,7 +1000,7 @@ system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so|2b2563450ad6a8d46
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so|58cd9358df40aa16ddf0e603b736c58588623b9e
 system_ext/priv-app/WfdService/WfdService.apk|b8a1d9f83804d274fab6e09e0607082801207f60
 
-# WiFi Display (vendor) - from sweet_k6a OS1.0.28.0.THGMIXM
+# WiFi Display (vendor) - from sweet_k6a OS1.0.33.0.THGMIXM
 vendor/bin/wfdvndservice|194bb3aef5237f05d0c8fab2c88846147a6cc55a
 vendor/bin/wifidisplayhalservice|f887a8806cf686502a4a0d1929149b470db650f7
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|576ce4393b7746b77a230745aa9e9ee3bd31b17d
